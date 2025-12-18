@@ -1,35 +1,28 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Penjumlahan & Pengurangan</title>
+    <title>Tombol Nama</title>
 </head>
 <body>
 
-    <h3>penjumlahan sederhana</h3>
+    <h2 id="hasil"></h2>
 
-    <input type="number" id="angka1" placeholder=""><br><br>
-    <input type="number" id="angka2" placeholder=""><br><br>
-
-    <button onclick="tambah()">+</button>
-    <button onclick="kurang()">-</button><br><br>
-
-    <p id="hasil"></p>
+    <button onclick="tombol1()">Tombol1</button>
+    <button onclick="tombol2()">Tombol2</button>
+    <button onclick="reset()">Reset</button>
 
     <script>
-        function tambah() {
-            let a = parseInt(document.getElementById("angka1").value) || 0;
-            let b = parseInt(document.getElementById("angka2").value) || 0;
-
-            document.getElementById("hasil").textContent = a + b;
+        function tombol1() {
+            document.getElementById("hasil").innerHTML = "farina";
         }
 
-        function kurang() {
-            let a = parseInt(document.getElementById("angka1").value) || 0;
-            let b = parseInt(document.getElementById("angka2").value) || 0;
+        function tombol2() {
+            document.getElementById("hasil").innerHTML = "ian";
+        }
 
-            document.getElementById("hasil").textContent = a - b;
+        function reset() {
+            document.getElementById("hasil").innerHTML = "";
         }
     </script>
 
