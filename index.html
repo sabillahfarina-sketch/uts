@@ -1,28 +1,52 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Tombol Nama</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operasi Aritmatika</title>
 </head>
 <body>
 
-    <h2 id="hasil"></h2>
+    <h3>penjumlahan sederhana</h3>
 
-    <button onclick="tombol1()">Tombol1</button>
-    <button onclick="tombol2()">Tombol2</button>
-    <button onclick="reset()">Reset</button>
+    <input type="number" id="angka1" placeholder=""><br><br>
+    <input type="number" id="angka2" placeholder=""><br><br>
+
+    <button onclick="tambah()">+</button>
+    <button onclick="kurang()">-</button><br><br>
+    <button onclick="kali()">×</button>
+    <button onclick="bagi()">÷</button><br><br>
+
+    <p id="hasil"></p>
 
     <script>
-        function tombol1() {
-            document.getElementById("hasil").innerHTML = "farina";
+        function tambah() {
+            let a = parseInt(document.getElementById("angka1").value) || 0;
+            let b = parseInt(document.getElementById("angka2").value) || 0;
+            document.getElementById("hasil").textContent = a + b;
         }
 
-        function tombol2() {
-            document.getElementById("hasil").innerHTML = "ian";
+        function kurang() {
+            let a = parseInt(document.getElementById("angka1").value) || 0;
+            let b = parseInt(document.getElementById("angka2").value) || 0;
+            document.getElementById("hasil").textContent = a - b;
         }
 
-        function reset() {
-            document.getElementById("hasil").innerHTML = "";
+        function kali() {
+            let a = parseInt(document.getElementById("angka1").value) || 0;
+            let b = parseInt(document.getElementById("angka2").value) || 0;
+            document.getElementById("hasil").textContent = a * b;
+        }
+
+        function bagi() {
+            let a = parseInt(document.getElementById("angka1").value) || 0;
+            let b = parseInt(document.getElementById("angka2").value) || 0;
+
+            if (b === 0) {
+                document.getElementById("hasil").textContent = "tidak bisa dibagi 0";
+            } else {
+                document.getElementById("hasil").textContent = a / b;
+            }
         }
     </script>
 
