@@ -1,30 +1,29 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Tombol Nama</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
 </head>
 <body>
-
-    <h2 id="hasil"></h2>
-
-    <button onclick="tombol1()">Tombol1</button>
-    <button onclick="tombol2()">Tombol2</button>
-    <button onclick="reset()">Reset</button>
+    <button id="paraghraf1" onclick="fungsi1(event)">paraghraf1</button>
+    <button id="paraghraf2" onclick="fungsi2(event)">paraghraf2</button>
+    <p id="hasil1"></p>
+    <p id="hasil2"></p>
 
     <script>
-        function tombol1() {
-            document.getElementById("hasil").innerHTML = "farina";
+        
+        function fungsi1(e) {
+            document.getElementById("hasil1").textContent = "ini adalah p1";
         }
 
-        function tombol2() {
-            document.getElementById("hasil").innerHTML = "ian";
+        function fungsi2(e) {
+            document.getElementById("hasil2").textContent = "ini adalah p2";
         }
 
-        function reset() {
-            document.getElementById("hasil").innerHTML = "";
-        }
+        
+
+
     </script>
-
 </body>
 </html>
